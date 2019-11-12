@@ -1,0 +1,12 @@
+<h1> <%= @task.title %></h1>
+
+<p> <%= @task.details %></p>
+<p> Ma tache est
+  <%  if @task.completed != false %>
+   <%= "complétée"  %>
+  <% else %>
+    <%= "en cours" %>
+    <% end %>
+  </p>
+
+<%= link_to 'Go back', index_path %>

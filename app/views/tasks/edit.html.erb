@@ -1,0 +1,13 @@
+<h1>Editer une tâche</h1>
+
+<%= form_for(@task) do |f| %>
+<%= f.label :title, "Your task"%>
+<%= f.text_field :title %>
+<%= f.label :details, "Description"%>
+<%= f.text_field :details %>
+<%= f.submit %>
+<% end %>
+
+<%= link_to "Delete", task_path(task[:id]),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
